@@ -9,7 +9,7 @@ if os.path.exists(path):
         a = os.path.join(path,root)
         print(a)
         ctime = os.stat(a).st_ctime
-        if ctime < days:
+        if ctime > days:
             if subFols:
                 print(subFols)
                 shutil.rmtree(a)
